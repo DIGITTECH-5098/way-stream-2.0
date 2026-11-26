@@ -1,0 +1,252 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3192A0115C6BD39EBC2581E7 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51347962266EBC600F07F1EB /* AudioPlayer.swift */; };
+		3DFDCF70EB9F59A81906F06C /* ConnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66033060E1EBEB47145A37 /* ConnectView.swift */; };
+		94652ED7F305B02E3C8BE04A /* GamepadOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAB673FD59DC7CA4578FEA4 /* GamepadOverlay.swift */; };
+		CB444A37DB24FE6FA5D1E700 /* KeyboardBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC142F7FCC4DA5AF46B8DF43 /* KeyboardBar.swift */; };
+		1B87D1B7A94374BF9D32DB02 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548F2D88B48279D2F3154496 /* Models.swift */; };
+		C8504FB02B678780405AC80A /* StreamClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0D05B78FDB1F97665B6CD1 /* StreamClient.swift */; };
+		31F59F52303DD21D1F7703F9 /* StreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD275B548442D2439DA2028 /* StreamView.swift */; };
+		2ED5E9730697FB3AEFA2B462 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD16E2B5F909ECCA41070409 /* VideoView.swift */; };
+		5A7484FF082AFB457B259CD4 /* WayLinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9DE8F64D5E692D47FD468 /* WayLinkApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F67A924B84DCA1F21708589C /* WayLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WayLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51347962266EBC600F07F1EB /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		EE66033060E1EBEB47145A37 /* ConnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectView.swift; sourceTree = "<group>"; };
+		8FAB673FD59DC7CA4578FEA4 /* GamepadOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamepadOverlay.swift; sourceTree = "<group>"; };
+		AC142F7FCC4DA5AF46B8DF43 /* KeyboardBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardBar.swift; sourceTree = "<group>"; };
+		548F2D88B48279D2F3154496 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		EC0D05B78FDB1F97665B6CD1 /* StreamClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamClient.swift; sourceTree = "<group>"; };
+		AAD275B548442D2439DA2028 /* StreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamView.swift; sourceTree = "<group>"; };
+		FD16E2B5F909ECCA41070409 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		F2E9DE8F64D5E692D47FD468 /* WayLinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayLinkApp.swift; sourceTree = "<group>"; };
+		CD56888C2B6E25D1FDE0DBDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7956E04A2863A92AC92B00A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4851B1B3B41BB58E7D206C34 = {
+			isa = PBXGroup;
+			children = (
+				F9174F0A3572166139693849 /* WayLink */,
+				553C2785BCEA7721060CA11A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		553C2785BCEA7721060CA11A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F67A924B84DCA1F21708589C /* WayLink.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9174F0A3572166139693849 /* WayLink */ = {
+			isa = PBXGroup;
+			children = (
+				51347962266EBC600F07F1EB /* AudioPlayer.swift */,
+				EE66033060E1EBEB47145A37 /* ConnectView.swift */,
+				8FAB673FD59DC7CA4578FEA4 /* GamepadOverlay.swift */,
+				AC142F7FCC4DA5AF46B8DF43 /* KeyboardBar.swift */,
+				548F2D88B48279D2F3154496 /* Models.swift */,
+				EC0D05B78FDB1F97665B6CD1 /* StreamClient.swift */,
+				AAD275B548442D2439DA2028 /* StreamView.swift */,
+				FD16E2B5F909ECCA41070409 /* VideoView.swift */,
+				F2E9DE8F64D5E692D47FD468 /* WayLinkApp.swift */,
+				CD56888C2B6E25D1FDE0DBDE /* Info.plist */,
+			);
+			path = WayLink;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		714CA38A1996D017812DCBC4 /* WayLink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA8A856EB8E1DD3A84B31594 /* Build configuration list for PBXNativeTarget "WayLink" */;
+			buildPhases = (
+				2F79D23425D703B0DDD11BDE /* Sources */,
+				7956E04A2863A92AC92B00A0 /* Frameworks */,
+				1D53510D40631A54C8C121E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WayLink;
+			productName = WayLink;
+			productReference = F67A924B84DCA1F21708589C /* WayLink.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A18ED60FE484E4ED165030B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = C7DA2987A9D70F020E6D37BA /* Build configuration list for PBXProject "WayLink" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4851B1B3B41BB58E7D206C34;
+			productRefGroup = 553C2785BCEA7721060CA11A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				714CA38A1996D017812DCBC4 /* WayLink */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D53510D40631A54C8C121E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F79D23425D703B0DDD11BDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3192A0115C6BD39EBC2581E7 /* AudioPlayer.swift in Sources */,
+				3DFDCF70EB9F59A81906F06C /* ConnectView.swift in Sources */,
+				94652ED7F305B02E3C8BE04A /* GamepadOverlay.swift in Sources */,
+				CB444A37DB24FE6FA5D1E700 /* KeyboardBar.swift in Sources */,
+				1B87D1B7A94374BF9D32DB02 /* Models.swift in Sources */,
+				C8504FB02B678780405AC80A /* StreamClient.swift in Sources */,
+				31F59F52303DD21D1F7703F9 /* StreamView.swift in Sources */,
+				2ED5E9730697FB3AEFA2B462 /* VideoView.swift in Sources */,
+				5A7484FF082AFB457B259CD4 /* WayLinkApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FB2B67EC5008B1C96BA0F068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		1DDA629529BF0CEE052A4125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6BF78E113353EAB519E630E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WayLink/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks",);;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.d3m0n.waylink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		615BE8C67315E6ADADC99EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WayLink/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks",);;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.d3m0n.waylink;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7DA2987A9D70F020E6D37BA /* Build configuration list for PBXProject "WayLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB2B67EC5008B1C96BA0F068 /* Debug */,
+				1DDA629529BF0CEE052A4125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA8A856EB8E1DD3A84B31594 /* Build configuration list for PBXNativeTarget "WayLink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BF78E113353EAB519E630E4 /* Debug */,
+				615BE8C67315E6ADADC99EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7A18ED60FE484E4ED165030B /* Project object */;
+}
