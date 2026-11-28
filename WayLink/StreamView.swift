@@ -199,19 +199,18 @@ struct StreamView: View {
                             .font(.caption)
                             .foregroundColor(.white.opacity(0.7))
                     })
-                .gesture(
-                    SpatialTapGesture()
-                        .onEnded { v in
-                            let x = v.location.x / max(1, geo.size.width)
-                            let y = v.location.y / max(1, geo.size.height)
-                            if let target = mappingTarget {
-                                gamepadConfig.anchors[target] = CGPoint2D(
-                                    x: Double(min(1, max(0, x))),
-                                    y: Double(min(1, max(0, y))))
-                                gamepadConfig.save(profileName: profile.name)
-                            }
-                            mappingTarget = nil
-                        })
+                .background(
+                    TapCaptureView { pt in
+                        let x = pt.x / max(1, geo.size.width)
+                        let y = pt.y / max(1, geo.size.height)
+                        if let target = mappingTarget {
+                            gamepadConfig.anchors[target] = CGPoint2D(
+                                x: Double(min(1, max(0, x))),
+                                y: Double(min(1, max(0, y))))
+                            gamepadConfig.save(profileName: profile.name)
+                        }
+                        mappingTarget = nil
+                    })
         }
     }
 
@@ -238,6 +237,34 @@ struct StreamView: View {
                     }
                 }
             }
+        }
+    }
+}
+
+/// UIKit tap capture (unambiguous location API for the mapping mode).
+struct TapCaptureView: UIViewRepresentable {
+    var onTap: (CGPoint) -> Void
+
+    func makeUIView(context: Context) -> UIView {
+        let v = UIView()
+        v.isUserInteractionEnabled = true
+        let t = UITapGestureRecognizer(target: context.coordinator,
+                                       action: #selector(Coordinator.tapped(_:)))
+        v.addGestureRecognizer(t)
+        return v
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {}
+
+    func makeCoordinator() -> Coordinator { Coordinator(onTap: onTap) }
+
+    final class Coordinator: NSObject {
+        let onTap: (CGPoint) -> Void
+        init(onTap: @escaping (CGPoint) -> Void) { self.onTap = onTap }
+
+        @objc func tapped(_ g: UITapGestureRecognizer) {
+            guard let view = g.view else { return }
+            onTap(g.location(in: view))
         }
     }
 }

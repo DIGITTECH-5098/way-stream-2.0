@@ -58,19 +58,20 @@ final class VideoDecoder {
     private func rebuildFormat() {
         guard let sps, let pps else { return }
         var desc: CMVideoFormatDescription?
-        let status = [sps, pps].withUnsafeBufferPointer { ptr -> OSStatus in
-            let rawPtrs = ptr.map { $0.withUnsafeBytes { $0.baseAddress } }
-            let sizes = ptr.map { $0.count }
-            return rawPtrs.withUnsafeBufferPointer { rp in
-                sizes.withUnsafeBufferPointer { sp in
-                    CMVideoFormatDescriptionCreateFromH264ParameterSets(
-                        allocator: kCFAllocatorDefault,
-                        parameterSetCount: 2,
-                        parameterSetPointers: rp.baseAddress!,
-                        parameterSetSizes: sp.baseAddress!,
-                        naluHeaderLength: 4,
-                        formatDescriptionOut: &desc)
-                }
+        let status = sps.withUnsafeBytes { spsRaw -> OSStatus in
+            pps.withUnsafeBytes { ppsRaw -> OSStatus in
+                var pointers: [UnsafePointer<UInt8>?] = [
+                    spsRaw.bindMemory(to: UInt8.self).baseAddress,
+                    ppsRaw.bindMemory(to: UInt8.self).baseAddress,
+                ]
+                var sizes: [Int] = [sps.count, pps.count]
+                return CMVideoFormatDescriptionCreateFromH264ParameterSets(
+                    allocator: kCFAllocatorDefault,
+                    parameterSetCount: 2,
+                    parameterSetPointers: &pointers,
+                    parameterSetSizes: &sizes,
+                    naluHeaderLength: 4,
+                    formatDescriptionOut: &desc)
             }
         }
         guard status == noErr, let desc else { return }
