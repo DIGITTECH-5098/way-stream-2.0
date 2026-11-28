@@ -10,17 +10,19 @@ workflows:
     scripts:
       - name: Build and package IPA
         script: |
-          set -euo pipefail
+          set -euxo pipefail
           xcodebuild -project WayLink.xcodeproj -scheme WayLink \
             -configuration Release -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY="" \
             build
           APP="build/Build/Products/Release-iphoneos/WayLink.app"
           test -d "$APP"
-          mkdir -p Payload
+          rm -rf Payload && mkdir -p Payload
           cp -R "$APP" Payload/
-          zip -qr WayLink-unsigned.ipa Payload
+          rm -f WayLink-unsigned.ipa
+          ditto -c -k --sequesterRsrc --keepParent Payload WayLink-unsigned.ipa
           ls -la WayLink-unsigned.ipa
     artifacts:
       - WayLink-*.ipa

@@ -231,7 +231,7 @@ def main():
             "DEVELOPMENT_TEAM = \"\"",
             "GENERATE_INFOPLIST_FILE = NO",
             "INFOPLIST_FILE = WayLink/Info.plist",
-            "LD_RUNPATH_SEARCH_PATHS = (\"$(inherited)\", \"@executable_path/Frameworks\",);",
+            "LD_RUNPATH_SEARCH_PATHS = (\"$(inherited)\", \"@executable_path/Frameworks\",)",
             "MARKETING_VERSION = 1.0",
             "PRODUCT_BUNDLE_IDENTIFIER = " + BUNDLE_ID,
             "PRODUCT_NAME = \"$(TARGET_NAME)\"",
